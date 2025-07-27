@@ -1,0 +1,21 @@
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "description": "The progressive JavaScript framework for building modern web UI",
+  "main": "index.js",
+  "module": "dist/shared.global.js",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "sideEffects": false,
+  "buildOptions": {
+    "name": "Vue",
+    "formats": [
+      "esm-bundle",
+      "esm-browser",
+      "cjs",
+      "global"
+    ]
+  }
+}

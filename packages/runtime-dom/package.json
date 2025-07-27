@@ -1,0 +1,21 @@
+{
+  "name": "@vue/runtime-dom",
+  "version": "1.0.0",
+  "description": "运行时dom模块",
+  "main": "index.js",
+  "module": "dist/runtimeDom.global.js",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "sideEffects": false,
+  "buildOptions": {
+    "name": "VueRuntimeDom",
+    "formats": [
+      "esm-bundle",
+      "esm-browser",
+      "cjs",
+      "global"
+    ]
+  }
+}

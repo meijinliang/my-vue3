@@ -1,0 +1,21 @@
+{
+  "name": "@vue/shared",
+  "version": "1.0.0",
+  "description": "vue公共工具模块",
+  "main": "index.js",
+  "module": "dist/shared.global.js",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "sideEffects": false,
+  "buildOptions": {
+    "name": "VueShared",
+    "formats": [
+      "esm-bundle",
+      "esm-browser",
+      "cjs",
+      "global"
+    ]
+  }
+}

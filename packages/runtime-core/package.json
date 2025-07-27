@@ -1,0 +1,21 @@
+{
+  "name": "@vue/runtime-core",
+  "version": "1.0.0",
+  "description": "运行时核心模块",
+  "main": "index.js",
+  "module": "dist/runtimeCore.global.js",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "sideEffects": false,
+  "buildOptions": {
+    "name": "VueruntimeCore",
+    "formats": [
+      "esm-bundle",
+      "esm-browser",
+      "cjs",
+      "global"
+    ]
+  }
+}

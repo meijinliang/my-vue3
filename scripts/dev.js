@@ -49,9 +49,11 @@ const outputFormat = format.startsWith('global')
     : 'esm'
 console.log('dev script running...', rawFormat, positionals)
 
-console.log(esbuild)
-
 for (const target of targets) {
+  const pkgBasePath = `../packages/${ target }`
+  const pkg = require(`${ pkgBasePath }/package.json`)
+
+  console.log('pkg', pkg);
   // context中传入打包的配置
   esbuild
     .context({
@@ -63,7 +65,8 @@ for (const target of targets) {
       bundle: true, // 把所有的文件打包，打包到一个文件里
       format: outputFormat, // 打包格式
       platform: format === 'cjs' ? 'node' : 'browser', // 打包平台 默认情况下，esbuild 的打包器为浏览器生成代码, 如果打包的代码要在node环境中执行需要设置为node
-      sourcemap: true // 开启sourcemap方便调试
+      sourcemap: true, // 开启sourcemap方便调试
+      globalName: pkg.buildOptions?.name
     })
     .then(ctx => ctx.watch()) // 文件变化的时候会重新进行打包
 }
