@@ -1,7 +1,1 @@
-// export * from './reactive'
-// export * from '/ref'
-
-
-export function reactive(target) {
-  console.log(target)
-}
+export * from './reactive'

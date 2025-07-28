@@ -7,3 +7,5 @@
 
 - npx tsc --init npx 执行的是项目中安装的 typescript
 - tsc --init 如果安装了全局的 typescript 执行的就是全局的
+
+Monorepo关联多项目安装本地依赖 pnpm install @vue/shared --workspace --filter @vue/reactivity @vue/shared 安装依赖的包名 --workspace 安装本地 --filter <> 安装目标项目

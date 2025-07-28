@@ -1,3 +1,1 @@
-export function isObject(target) {
-  return !!(typeof target === 'object')
-}
+export * from './general'
